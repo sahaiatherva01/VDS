@@ -250,6 +250,28 @@ nav {
       font-size: 2em;
     }
   }
+  .marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-block;
+  color: var(--highlight-color);
+  animation: marquee 50s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
   
   </style>
 </head>
@@ -274,6 +296,11 @@ nav {
   </header>
   <main>
     <br><br><br><br><br>
+    <div class="marquee-container">
+      <div class="marquee-text">
+        <h1>Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live Live</h1>
+      </div>
+      <br>
     <section id="about">
       <h2>About Us</h2>
       <p>Welcome to Verve Dance Studio & Gym! Experience the joy of dance and the power of fitness under one roof.</p>
@@ -342,6 +369,7 @@ nav {
     </section>
   </main>
   <script>
+    
     let lastScrollTop = 0;
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
