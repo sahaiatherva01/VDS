@@ -32,6 +32,10 @@
       --highlight-color: #ffdd00;
       --dark-bg: rgba(0, 0, 0, 0.85);
     }
+
+    /* =====================================
+       2. Header Section
+       ===================================== */
     /* Header */
 header {
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
@@ -41,12 +45,6 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  opacity: 0.9;  /* Reduce opacity */
-  transition: opacity 0.3s ease-in-out;
-}
-
-header:hover {
-  opacity: 1;  /* Full opacity on hover */
 }
 
 /* Navigation Bar */
@@ -58,14 +56,7 @@ nav {
   top: 100px; /* Space between header and nav */
   z-index: 999;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  opacity: 0.85; /* Reduced opacity */
-  transition: opacity 0.3s ease-in-out;
 }
-
-nav:hover {
-  opacity: 8; /* Full opacity on hover */
-}
-
 
 /* Hide Navigation Bar in Mobile View */
 @media (max-width: 1000px) {
@@ -259,34 +250,6 @@ nav:hover {
       font-size: 2em;
     }
   }
-  .programs-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .program-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    width: 220px;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  }
-
-  .program-card img {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  }
-
-  .program-card:hover {
-    transform: scale(1.05);
-  }
   
   </style>
 </head>
@@ -339,31 +302,6 @@ nav:hover {
         <img src="gym1.jpg" alt="Gym Workout">
         <img src="dance2.jpg" alt="Hip Hop Class">
         <img src="gym2.jpg" alt="Strength Training">
-      </div>
-    </section>
-    <section id="programs">
-      <h2>Programs Available</h2>
-      <div class="programs-container">
-        <div class="program-card">
-          <img src="dance.jpg" alt="Dance">
-          <h3>💃 Dance</h3>
-          <p>From Bollywood to Hip Hop, learn dance styles from the best instructors.</p>
-        </div>
-        <div class="program-card">
-          <img src="zumba.jpg" alt="Zumba">
-          <h3>🕺 Zumba</h3>
-          <p>High-energy Zumba sessions to keep you fit while having fun.</p>
-        </div>
-        <div class="program-card">
-          <img src="gym.jpg" alt="Gym">
-          <h3>🏋️ Gym</h3>
-          <p>State-of-the-art gym facilities with expert trainers to guide you.</p>
-        </div>
-        <div class="program-card">
-          <img src="event.jpg" alt="Event Management">
-          <h3>🎭 Event Management</h3>
-          <p>Get trained in organizing dance and fitness events like a pro!</p>
-        </div>
       </div>
     </section>
     <section id="pricing">
@@ -428,4 +366,4 @@ window.addEventListener("scroll", function () {
     <p>&copy; 2025 Vicky Dance Studio & Gym. All rights reserved.</p>
   </footer>
 </body>
-</html>
+          </html>
