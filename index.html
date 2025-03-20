@@ -219,13 +219,17 @@
       font-size: 2em;
     }
   }
-  @media (max-width: 768px) {
-  header {
+  @media (max-width: 1000px) {
+  header, nav {
     transition: top 0.3s;
   }
-  
+
   .hide-header {
     top: -100px; /* Moves header out of view */
+  }
+
+  .hide-nav {
+    top: -100px; /* Moves navigation out of view */
   }
 }
 
@@ -320,13 +324,16 @@
     let lastScrollTop = 0;
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
+  let navbar = document.querySelector("nav");
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (window.innerWidth <= 768) { // Apply only for mobile
+  if (window.innerWidth <= 1000) { // Apply only for mobile
     if (scrollTop > lastScrollTop) {
-      header.classList.add("hide-header"); // Hide when scrolling down
+      header.classList.add("hide-header"); // Hide header when scrolling down
+      navbar.classList.add("hide-nav");    // Hide nav when scrolling down
     } else {
-      header.classList.remove("hide-header"); // Show when scrolling up
+      header.classList.remove("hide-header"); // Show header when scrolling up
+      navbar.classList.remove("hide-nav");    // Show nav when scrolling up
     }
   }
   lastScrollTop = scrollTop;
@@ -338,4 +345,4 @@ window.addEventListener("scroll", function () {
     <p>&copy; 2025 Vicky Dance Studio & Gym. All rights reserved.</p>
   </footer>
 </body>
-</html>
+                           </html>
