@@ -316,20 +316,20 @@
     </section>
   </main>
   <script>
-  let lastScrollTop = 0;
-  window.addEventListener("scroll", function () {
-    let header = document.querySelector("header");
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  let navbar = document.querySelector("nav");
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (window.innerWidth <= 1000) { // Apply only for mobile
-      if (scrollTop > lastScrollTop) {
-        header.classList.add("hide-header"); // Hide when scrolling down
-      } else {
-        header.classList.remove("hide-header"); // Show when scrolling up
-      }
+  if (window.innerWidth <= 1000) { // Apply only for mobile
+    if (scrollTop > lastScrollTop) {
+      navbar.classList.add("hide-nav"); // Hide when scrolling down
+    } else {
+      navbar.classList.remove("hide-nav"); // Show when scrolling up
     }
-    lastScrollTop = scrollTop;
-  });
+  }
+  lastScrollTop = scrollTop;
+});
 </script>
 
   <footer>
