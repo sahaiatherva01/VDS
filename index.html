@@ -194,6 +194,31 @@
       background: #111;
       font-size: 0.9em;
     }
+    @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .instructors, .pricing-table, .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .instructor-card, .pricing-card {
+      width: 90%;
+    }
+
+    .logo {
+      font-size: 2em;
+    }
+  }
   </style>
 </head>
 
@@ -203,7 +228,7 @@
     <div class="header-container">
       <div class="logo">Logo</div>
       <div class="logo">Verve Dance Studio & Gym</div>
-      <a href="https://forms.gle/15rBzNcr78WDJZhu7" class="join-now-btn">Join Now</a>
+      <a href="https://forms.gle/ckqmTMYmw1nxT9g38" class="join-now-btn">Join Now</a>
     </div>
     <nav>
       <ul>
@@ -276,7 +301,7 @@
     
     <section id="contact">
       <h2>Contact Us</h2>
-      <p><strong>Address:</strong> Verve Dance Studio & Gym, Lucknow, Uttar Pradesh</p>
+      <p><strong>Address:</strong> Vicky Dance Studio & Gym, Lucknow, Uttar Pradesh</p>
       <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
       <p><strong>Email:</strong> contact@vickydancegym.com</p>
     </section>
@@ -286,4 +311,4 @@
     <p>&copy; 2025 Vicky Dance Studio & Gym. All rights reserved.</p>
   </footer>
 </body>
-</html>
+  </html>
