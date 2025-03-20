@@ -32,19 +32,48 @@
       --highlight-color: #ffdd00;
       --dark-bg: rgba(0, 0, 0, 0.85);
     }
+    /* Header */
+header {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;  /* Reduce opacity */
+  transition: opacity 0.3s ease-in-out;
+}
 
-    /* =====================================
-       2. Header Section
-       ===================================== */
-    header {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
+header:hover {
+  opacity: 1;  /* Full opacity on hover */
+}
+
+/* Navigation Bar */
+nav {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 100px; /* Space between header and nav */
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.85; /* Reduced opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav:hover {
+  opacity: 8; /* Full opacity on hover */
+}
+
+
+/* Hide Navigation Bar in Mobile View */
+@media (max-width: 1000px) {
+  nav {
+    display: none;
+  }
+}
+
 
     .header-container {
       display: flex;
@@ -174,6 +203,17 @@
       transition: transform 0.3s;
       box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
     }
+    .map-btn {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    }
 
     .pricing-card:hover {
       transform: scale(1.05);
@@ -219,20 +259,35 @@
       font-size: 2em;
     }
   }
-  @media (max-width: 1000px) {
-  header, nav {
-    transition: top 0.3s;
+  .programs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
-  .hide-header {
-    top: -100px; /* Moves header out of view */
+  .program-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   }
 
-  .hide-nav {
-    top: -100px; /* Moves navigation out of view */
+  .program-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   }
-}
 
+  .program-card:hover {
+    transform: scale(1.05);
+  }
+  
   </style>
 </head>
 
@@ -255,10 +310,10 @@
     </nav>
   </header>
   <main>
-    <br><br><br>
+    <br><br><br><br><br>
     <section id="about">
       <h2>About Us</h2>
-      <p>Welcome to Vicky Dance Studio & Gym! Experience the joy of dance and the power of fitness under one roof.</p>
+      <p>Welcome to Verve Dance Studio & Gym! Experience the joy of dance and the power of fitness under one roof.</p>
     </section>
 
     <section id="instructors">
@@ -284,6 +339,31 @@
         <img src="gym1.jpg" alt="Gym Workout">
         <img src="dance2.jpg" alt="Hip Hop Class">
         <img src="gym2.jpg" alt="Strength Training">
+      </div>
+    </section>
+    <section id="programs">
+      <h2>Programs Available</h2>
+      <div class="programs-container">
+        <div class="program-card">
+          <img src="dance.jpg" alt="Dance">
+          <h3>💃 Dance</h3>
+          <p>From Bollywood to Hip Hop, learn dance styles from the best instructors.</p>
+        </div>
+        <div class="program-card">
+          <img src="zumba.jpg" alt="Zumba">
+          <h3>🕺 Zumba</h3>
+          <p>High-energy Zumba sessions to keep you fit while having fun.</p>
+        </div>
+        <div class="program-card">
+          <img src="gym.jpg" alt="Gym">
+          <h3>🏋️ Gym</h3>
+          <p>State-of-the-art gym facilities with expert trainers to guide you.</p>
+        </div>
+        <div class="program-card">
+          <img src="event.jpg" alt="Event Management">
+          <h3>🎭 Event Management</h3>
+          <p>Get trained in organizing dance and fitness events like a pro!</p>
+        </div>
       </div>
     </section>
     <section id="pricing">
@@ -315,7 +395,10 @@
     
     <section id="contact">
       <h2>Contact Us</h2>
-      <p><strong>Address:</strong> Vicky Dance Studio & Gym, Lucknow, Uttar Pradesh</p>
+      <p><strong>Address:</strong> Verve Dance Studio & Gym, Lucknow, Uttar Pradesh
+        <a href="https://www.google.com/maps/search/?api=1&query=Verve+Dance+Studio+Gym+Lucknow" 
+        class="map-btn" target="_blank">View on Map</a>
+      </p>
       <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
       <p><strong>Email:</strong> contact@vickydancegym.com</p>
     </section>
@@ -345,4 +428,4 @@ window.addEventListener("scroll", function () {
     <p>&copy; 2025 Vicky Dance Studio & Gym. All rights reserved.</p>
   </footer>
 </body>
-                           </html>
+</html>
