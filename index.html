@@ -225,7 +225,7 @@
   }
   
   .hide-header {
-    top: -500px; /* Moves header out of view */
+    top: -1000px; /* Moves header out of view */
   }
 }
   </style>
@@ -323,9 +323,9 @@ window.addEventListener("scroll", function () {
 
   if (window.innerWidth <= 1000) { // Apply only for mobile
     if (scrollTop > lastScrollTop) {
-      navbar.classList.add("hide-nav"); // Hide when scrolling down
+      navbar.classList.add("hide-header"); // Hide when scrolling down
     } else {
-      navbar.classList.remove("hide-nav"); // Show when scrolling up
+      navbar.classList.remove("hide-header"); // Show when scrolling up
     }
   }
   lastScrollTop = scrollTop;
