@@ -321,7 +321,7 @@
     let header = document.querySelector("header");
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (window.innerWidth <= 768) { // Apply only for mobile
+    if (window.innerWidth <= 1000) { // Apply only for mobile
       if (scrollTop > lastScrollTop) {
         header.classList.add("hide-header"); // Hide when scrolling down
       } else {
